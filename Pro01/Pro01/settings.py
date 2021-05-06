@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+import os
 
 from pathlib import Path
 
@@ -37,8 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ferivery.apps.FeriveryConfig'
+    'ferivery.apps.FeriveryConfig',
+    'usuario', #app de usuario creada por mi
+    'product',
+
+    'django.contrib.sites',
 ]
+SITE_ID=1 #para poder poner usuarios y grupos
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -70,6 +76,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'Pro01.wsgi.application'
 
+AUTH_USER_MODEL = 'usuario.User' #cambiar como maneja los usuarios djang
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -119,3 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_ROOT = os.path.join(BASE_DIR,"media")
+MEDIA_URL = '/media/' #digamos que sirve
+LOGIN_REDIRECT_URL = 'index' #urls de redirect
+LOGOUT_REDIRECT_URL = 'index'

@@ -1,11 +1,263 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title> Ferivery </title>
-</head>
+{% extends "base.html" %}
+{% load static%}
+{% block titulo %}
+    <title>Ferivery</title>
+{% endblock%}
 
-<body>
-Hola mundo, en esta pag. puede comprar frutita de la buena giño giño.
-</body>
+{% block content %}
+{% load static %}
+    <!-- start slider section -->
+    <div class="slider_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+                        <div id="main_slider" class="carousel vert slide" data-ride="carousel" data-interval="5000">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="slider_cont">
+                                                <h3>Descubre Nuestros<br>Grandes Servicios</h3>
+                                                <p>Somos una nueva alternativa al metodo convencional de asistir a la feria para llevarte lo que necesites a la comodidad de tu casa</p>
+                                                <a class="main_bt_border" href="{% url 'productos' %}">Productos</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="slider_image full text_align_center">
+                                                <img class="img-responsive" src="{% static 'images/Frutas1.png'%}" alt="#" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="slider_cont">
+                                                <h3>Descubre Nuestros<br>Grandes Servicios</h3>
+                                                <p>Somos una nueva alternativa al metodo convencional de asistir a la feria para llevarte lo que necesites a la comodidad de tu casa</p>
+                                                <a class="main_bt_border" href="{% url 'productos' %}">Productos</a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <div class="slider_image full text_align_center">
+                                                <img class="img-responsive" src="{% static 'images/Frutas2.png'%}" alt="#" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                                <i class="fa fa-angle-up"></i>
+                            </a>
+                            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end slider section -->
 
-</html>
+
+
+
+
+
+ 
+
+
+
+
+
+<!--
+    <!-- section -->
+    <section class="resip_section">
+        <div class="container">
+            <div class="row">
+         <div class="col-md-12">
+       <div class="ourheading">
+    <h2>Destacados</h2>
+  </div>
+</div>    
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="owl-carousel owl-theme">
+
+                <div class="item">
+                    <div class="product_blog_img">
+                        <img src="{% static 'images/espinaca.jpg' %}" width="200px" height="200px"  alt="#" />
+                    </div>
+                    <div class="product_blog_cont">
+                        <h3>Espinaca</h3>
+                        
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product_blog_img">
+                        <img src="{% static 'images/papa.jpg'%}"  alt="#" />
+                    </div>
+                    <div class="product_blog_cont">
+                        <h3>Papa</h3>
+                        
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product_blog_img">
+                        <img src="{% static 'images/perejil.jpg' %}"  alt="#" />
+                    </div>
+                    <div class="product_blog_cont">
+                        <h3>Perejil</h3>
+                        
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product_blog_img">
+                        <img src="{% static 'images/piña.jpg' %}"  alt="#" />
+                    </div>
+                    <div class="product_blog_cont">
+                        <h3>Piña</h3>
+                        
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product_blog_img">
+                        <img src="{% static 'images/rabano.jpg' %}"  alt="#" />
+                    </div>
+                    <div class="product_blog_cont">
+                        <h3>Rabano</h3>
+                        
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="product_blog_img">
+                        <img src="{% static 'images/sandia.png' %}" width="150" height="150" alt="#" />
+                    </div>
+                    <div class="product_blog_cont">
+                        <h3>Sandia</h3>
+                        
+                    </div>
+                </div>
+                
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+<div class="bg_bg">
+<!-- about -->
+<div class="about">
+    <div class="container">
+      <div class="row">
+         <div class="col-md-12">
+             <div class="title">
+                <i><img src="{% static 'images/title.png'%}" alt="#"/></i>
+                <h2>Sobre nuestros servicios</h2>
+                <span>Somos un servicio nuevo que busca ayudar a la gente ofreciendoles un servicio innovador
+                   <br> ayudandolos a hacer sus compras sin necesidad de exponerse
+                </span>
+             </div>
+          </div>
+       </div>
+       <div class="row">
+         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+             <div class="about_box">
+                 <h3>Mejor Producto</h3>
+                 <p>Lechuga, simplemente una rica lechuga </p>
+                 <a href="#">Miralo <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+             </div>
+         </div>
+          <div class="col-xl-5 col-lg-5 col-md-10 col-sm-12 about_img_boxpdnt">
+             <div class="about_img">
+                 <figure><img src="{% static 'images/awadeowo.jpg' %}" width="325" height="325" alt="#/"></figure>
+             </div>
+         </div>      
+       </div> 
+    </div>
+</div>
+<!-- end about -->
+
+<!-- blog -->
+<div class="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title">
+          <i><img src="{% static 'images/title.png'%}" alt="#"/></i>
+          <h2>Nuestros Productos</h2>
+          <span>Lleve bonitos productos casero/a </span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mar_bottom">
+        <div class="blog_box">
+          <div class="blog_img_box">
+            <figure><img src="{% static 'images/platanos.jpg' %}" width="335px" height="376px" alt="#"/>
+             <span>02 FEB 2019</span>
+            </figure>
+          </div>
+          <h3>Platano</h3>
+          <p>Una rica fruta tropical recomendada firmemente por George de la Selva y el famoso King Kong</p>
+        </div>
+      </div>
+       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 mar_bottom">
+        <div class="blog_box">
+          <div class="blog_img_box">
+            <figure><img src="{% static 'images/zanahorias.png' %}" alt="#"/>
+             <span>02 FEB 2019</span>
+            </figure>
+          </div>
+          <h3>Zanahorias</h3>
+          <p>Las famosas zanahorias que comia el mitico actor bugs bunny el conejo</p>
+        </div>
+      </div>
+       <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+        <div class="blog_box">
+          <div class="blog_img_box">
+            <figure><img src="{% static 'images/awadeowo.jpg' %}" alt="#"/>
+             <span>02 FEB 2019</span>
+            </figure>
+          </div>
+          <h3>Lechuga</h3>
+          <p>Casero no encontrara ninguna lechuga tan fresca y tan rica como esta en ningun lado</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end blog -->
+
+<!-- Our Client -->
+<div class="Client">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="title">
+          <i><img src="{% static 'images/title.png'%}" alt="#"/></i>
+          <h2>Un wooper</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+         <div class="Client_box">
+           <img src="{% static 'images/wooper.gif' %}" alt="#"/>
+           <h3>Wooper</h3>
+           <p>El mejor pokemon existente y mascota de Ferivery. </p>
+           <i><img src="{% static 'images/client_icon.png' %}" alt="#"/></i>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>  
+<!-- end Our Client -->
+
+{% endblock %}

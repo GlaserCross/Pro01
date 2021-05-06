@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block titulo %} <title>Producto</title> {% endblock %}
+{% block content%}
+{% load static %}
+
+<br>
+<br>
+<br>
+<br>
+<br>	
+<br>
+<br>
+{% if user.is_vendedor %}
+	<title>Crear producto</title>
+<form action="" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+	<table>
+		{{ form.as_table }}
+	</table>
+	<input type = "submit" value="Submit"/>
+</form>
+{% else%}
+<p>¿Qué haces aquí?</p>
+{% endif%}
+{% endblock %}

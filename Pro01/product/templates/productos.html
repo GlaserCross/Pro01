@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block titulo %} <title>Poducto</title> {% endblock %}
+{% block content%}
+{% load static %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+	{% load static %}
+          {% for product in num_product %}
+          <div class="col-lg-2">
+            <div class="card">
+              <img class="card-img-top" src="{{ product.image.url }}">
+              <div class="card-body">
+                <h4 class="card-title"> {{ product.nombre }}</h4>
+                <p class="card-text"><h3>Tipo</h3> {{product.tipo}} </p>
+                <p class="card-text"><h3>Vendedor</h3><strong>{{ product.User }}</strong></p>
+                <p class="card-text"><h3>Precio</h3> ${{product.precio}}</p>
+				<a href="#" class="btn btn-primary">Comprar</a>
+				
+				
+				{% if product.User == user %}
+					
+
+                <a href="/product/{{product.id}}/update/" class="btn btn-primary">Editar</a>
+				<a href="/product/{{product.id}}/delete/" class="btn btn-primary">Eliminar</a>
+				{% endif %}
+            
+			
+              </div>
+            </div>
+          </div>          
+          {% endfor %}
+        </div>
+{% endblock%}

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% load static%}
+{% block titulo %}
+    <title>Ferivery</title>
+{% endblock%}
+
+{% block content %}
+{% load static %}
+<br>
+<br>
+<br>
+<br>
+<br>    
+<form class="form-horizontal" method="post" action="{% url 'login' %}">
+                    {% csrf_token %}
+                    <fieldset>
+                        <legend class="col-md-8">Inicio Sesion</legend>
+
+                        
+                        
+                        
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <td>{{ form.username.label_tag }}</td>
+                                <td>{{ form.username }}</td>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <td>{{ form.password.label_tag }}</td>
+                                <td>{{ form.password }}</td>
+                            </div>
+
+                        <br>
+                    
+
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-primary btn-lg" value="login"
+                                >Iniciar</button>
+                                <input type="hidden" name="next" value="{{ next }} "/>
+                            </div>
+                        </div>
+                       
+
+                         <!--<a  href=""><img src="" alt="google" height="50px" width="60px"> Ingresar con Google </a>
+
+                        <p><a href="{% url 'password_reset' %}">¿Olvidaste tu contraseña?</a></p>-->
+                    </fieldset>
+                </form>
+{% endblock%}

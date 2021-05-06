@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block titulo %} <title>Poducto</title> {% endblock %}
+{% block content%}
+{% load static %}
+<br>
+<br>
+<br>
+<br>
+<br>
+{% if product.User == user %}
+<section id="galeria" class="container">
+        <div class="text-center pt-5">
+          <h1>Detalles</h1>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="card">
+              <img class="card-img-top" src="{{ product.image.url }}">
+              <div class="card-body">
+                <h4 class="card-title"> {{ product.nombre }}</h4>
+                <p class="card-text"><h3>Tipo</h3> {{product.User}} </p>
+                <p class="card-text"><h3>Tipo</h3> {{product.tipo}} </p>
+                <p class="card-text"><h3>Precio</h3> ${{product.precio}}</p>
+                <a href="product/{{product.id}}/update/" class="btn btn-primary">Editar</a>
+                <a href="product/{{product.id}}/delete/" class="btn btn-primary">Eliminar</a>
+              </div>
+            </div>
+          </div>          
+        </div>
+</section>
+{% else %}
+        <p>Que haces aquí?</p>
+        {% endif %}
+{% endblock%}
